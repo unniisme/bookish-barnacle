@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Unnii-gpt</title>
+  </head>
+  <body>
+    <form method="POST">
+        <label for="prompt">User:</label>
+        <input type="text" id="note" name="prompt">
+        <input type="submit" value="Submit">
+    </form>
+
+    {% for dialogue in chat %}
+      <p>
+        {{dialogue['role'] + "\t"}} : {{dialogue['content']}}
+      </p>
+    {%endfor%}
+
+  </body>
+</html>

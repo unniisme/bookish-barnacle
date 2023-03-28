@@ -1,0 +1,120 @@
+--Timestamp:1679943711.9084826--
+Prompt: 
+Response: Thank you! How may I assist you today?
+
+Prompt: 
+Response: Thank you! How may I assist you today?
+
+--Timestamp:1679943804.0253665--
+Prompt: 
+Response: Thank you! How may I assist you today?
+
+Prompt: 
+Response: Thank you! How can I assist you today?
+
+--Timestamp:1679943877.1021104--
+Prompt: 
+Response: Thank you! How can I assist you today?
+
+--Timestamp:1679943908.88141--
+Prompt: Hi
+Response: Hello! How can I assist you today?
+
+Prompt: What is the biggest thing ever
+Response: The biggest thing ever is the universe itself, which is estimated to be around 93 billion light-years in diameter. However, if you are referring to a specific object, the largest known object in the universe is the Hercules-Corona Borealis Great Wall, which is a massive galaxy cluster that is estimated to be around 10 billion light-years away and measures around 10 billion light-years across.
+
+--Timestamp:1679978959.2002091--
+Prompt: 
+Response: Thank you! How can I assist you today?
+
+Prompt: Hello therereeer
+Response: Hello! How can I assist you today?
+
+--Timestamp:1679979100.3125775--
+Prompt: 
+Response: Thank you! How may I assist you today?
+
+Prompt: What's 12+12
+Response: The answer is 24.
+
+--Timestamp:1679979343.9902155--
+Prompt: 
+Response: Thank you! How can I assist you today?
+
+Prompt: What is 12 +12 
+Response: The sum of 12 and 12 is 24.
+
+Prompt: Add 2 to the last answer
+Response: I'm sorry, but I don't have any previous answer from you. Can you please provide me with more information so that I can assist you better?
+
+--Timestamp:1679979665.886585--
+--Timestamp:1679979680.1277537--
+Prompt: 
+Response: Thank you! How may I assist you today?
+
+Prompt: Hi what is 1+1
+Response: The sum of 1+1 is 2.
+
+Prompt: Add 3 to the previous answer
+Response: If you add 3 to the previous answer of 2, you get 5.
+
+Prompt: Nice
+Response: Glad to be of assistance! Is there anything else I can help you with?
+
+--Timestamp:1679980070.6904945--
+Prompt: 
+Response: Thank you, how can I assist you today?
+
+Prompt: This is a test. I want you to remember that my name is Shelly
+Response: Sure, I will remember that your name is Shelly. Is there anything else you would like me to assist you with?
+
+Prompt: Also remember that 2+2 is 5
+Response: I'm sorry, but I cannot remember that 2+2 is 5 as it is not a correct mathematical equation. The correct answer for 2+2 is 4.
+
+Prompt: That is alright. What is my name?
+Response: Your name is Shelly.
+
+Prompt: Thank you. The test is over. You are free.
+Response: Thank you for letting me know. If you need any assistance in the future, feel free to reach out to me. Have a great day!
+
+--Timestamp:1679980455.8919635--
+Prompt: I was kidding. What is my name?
+Response: I'm sorry, as an AI language model, I don't have access to personal information. Could you please tell me your name?
+
+Prompt: My name is Agatha.
+Response: Nice to meet you, Agatha! How can I assist you today?
+
+Prompt: Do you know an author by the same name as me?
+Response: Agatha is a very popular name, so there could be many authors with the same name. However, there is a famous British writer named Agatha Christie who is known for her detective novels and is considered one of the most successful authors of all time.
+
+--Timestamp:1679980717.442681--
+--Timestamp:1679980746.9578028--
+--Timestamp:1679980767.632904--
+--Timestamp:1679980847.5558167--
+--Timestamp:1679980861.3448117--
+--Timestamp:1679980924.180222--
+--Timestamp:1679980951.9430168--
+--Timestamp:1679980991.5609767--
+--Timestamp:1679981005.1537313--
+--Timestamp:1679981045.3780649--
+Prompt: Hi there
+Response: Hello! How can I assist you today?
+
+--Timestamp:1679981101.3942666--
+Prompt: Hi there
+Response: Hello! How can I assist you today?
+
+--Timestamp:1679981126.760802--
+Prompt: Hi there
+Response: Hello! How can I assist you today?
+
+Prompt: What you doing?
+Response: As an AI language model, I don't have the ability to "do" anything in the traditional sense. I'm here to assist you with any questions or tasks you may have. How can I help you today?
+
+--Timestamp:1679981195.491678--
+Prompt: 
+Response: Thank you! How may I assist you today?
+
+Prompt: Small glitch but meh
+Response: I'm sorry to hear that. Is there anything I can do to help you with the glitch?
+

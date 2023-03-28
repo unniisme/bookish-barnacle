@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Unnii-Local</title>
+  </head>
+  <body>
+    <h>
+      Dynamic Notepad
+    </h>
+    <form method="POST">
+      <textarea name="notes" rows="10" cols="50">{{notes}}</textarea>
+      <br>
+      <input type="submit" value="Save">
+    </form>
+
+    <br>
+    <br>
+    <br>
+    <h>
+      Files
+    </h>
+    <br>
+    <br>
+
+    {%for dir in files%}
+    <a href='files/{{dir}}'>{{dir}}</a><br>
+    {%endfor%}
+
+    <form method=post enctype=multipart/form-data>
+      <input type=file name=file>
+      <input type=submit value=Upload>
+    </form>
+  </body>
+</html>

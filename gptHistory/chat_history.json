@@ -1,0 +1,18 @@
+[
+    {
+        "role": "user",
+        "content": ""
+    },
+    {
+        "role": "assistant",
+        "content": "Thank you! How may I assist you today?"
+    },
+    {
+        "role": "user",
+        "content": "Small glitch but meh"
+    },
+    {
+        "role": "assistant",
+        "content": "I'm sorry to hear that. Is there anything I can do to help you with the glitch?"
+    }
+]
