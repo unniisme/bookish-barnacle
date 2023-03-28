@@ -49,18 +49,30 @@ def serve_file(path):
 
 
 prompt = ''
-@app.route('/gpt', methods=['GET', 'POST'])
-def gpt():
+@app.route('/gpt/<chat_name>', methods=['GET', 'POST'])
+def gpt(chat_name):
     global prompt
 
-    if request.method == 'POST':
-        prompt = request.form['prompt']
+    try:
+        if request.method == 'POST':
+            prompt = request.form['prompt']
 
-    generate_response(prompt)
-    with open("gptHistory/chat_history.json", "r") as history_json:
-        history = json.load(history_json)
+            generate_response(prompt, "gptHistory/" + chat_name + ".json")
 
-    return render_template('gpt.html', chat = history)  
+            with open("gptHistory/" + chat_name + ".json", "r") as history_json:
+                history = json.load(history_json)
+        else:
+            try:
+                with open("gptHistory/" + chat_name + ".json", "r") as history_json:
+                    history = json.load(history_json)
+            except:
+                history = []
+
+        return render_template('gpt.html', chat = history)  
+    
+    except Exception as e:
+        print (e)
+        return "Error. Probably OpenAI stuff. Reload or contact the admin"
 
 
 if __name__ == '__main__':

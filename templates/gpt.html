@@ -2,20 +2,25 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/gpt.css') }}">
     <title>Unnii-gpt</title>
+    <script>window.onload = function() {
+      window.scrollTo(0, document.body.scrollHeight);
+    }</script>
   </head>
   <body>
-    <form method="POST">
-        <label for="prompt">User:</label>
-        <input type="text" id="note" name="prompt">
-        <input type="submit" value="Submit">
-    </form>
 
     {% for dialogue in chat %}
-      <p>
-        {{dialogue['role'] + "\t"}} : {{dialogue['content']}}
-      </p>
+    <div class="convo">
+      <pre class="dialogue-{{dialogue['role']}}">{{dialogue['role'] + "\t"}} : {{dialogue['content']}}</pre>
+    </div>
     {%endfor%}
+
+    <br>
+    <form method="POST" class="prompt-box">
+      <textarea name="prompt" class="prompt" rows="6" cols="100">{{notes}}</textarea>
+      <input class="button" type="submit" value="Submit">
+    </form>
 
   </body>
 </html>

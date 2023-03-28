@@ -3,15 +3,16 @@
   <head>
     <meta charset="UTF-8">
     <title>Unnii-Local</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/frontpage.css') }}">
   </head>
   <body>
     <h>
       Dynamic Notepad
     </h>
-    <form method="POST">
-      <textarea name="notes" rows="10" cols="50">{{notes}}</textarea>
+    <form method="POST" class="note-form">
+      <textarea name="notes" class="note-text" rows="10" cols="50">{{notes}}</textarea>
       <br>
-      <input type="submit" value="Save">
+      <input class="save-button" type="submit" value="Save">
     </form>
 
     <br>
@@ -23,13 +24,15 @@
     <br>
     <br>
 
+    <div class="files">
     {%for dir in files%}
-    <a href='files/{{dir}}'>{{dir}}</a><br>
+    <a class="file" href='files/{{dir}}'>{{dir}}</a>
     {%endfor%}
+    </div>
 
-    <form method=post enctype=multipart/form-data>
+    <form method=post class="upload-form" enctype=multipart/form-data>
       <input type=file name=file>
-      <input type=submit value=Upload>
+      <input class="upload-button" type=submit value=Upload>
     </form>
   </body>
 </html>

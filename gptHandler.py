@@ -3,8 +3,7 @@ import os
 from time import time
 import json
 
-history_file = open(os.getcwd() + "/gptHistory/chat_history.txt", "a")
-memory = []
+history_file = open(os.getcwd() + "/gptHistory/chat_history.log", "a")
 history_file.write(f"--Timestamp:{time()}--\n")
 
 
@@ -18,7 +17,16 @@ openai.api_key = os.environ["OPENAI_API_KEY"]
 
 
 
-def generate_response(prompt, keep_memory = True, write_history = True):
+def generate_response(prompt, memory_file, keep_memory = True, write_history = True):
+    if keep_memory:
+        try:
+            with open(memory_file, "r") as history_json:
+                memory = json.load(history_json)
+        except Exception as e:
+            memory = []
+            with open(memory_file, "w") as history_json:
+                json.dump(memory, history_json, indent=4)      
+
     messages = [{"role":"system", "content":"You are a helpful assistant"}] + memory + [{"role": "user", "content": prompt}]
     # print("-----")
     # print(messages)
@@ -36,12 +44,13 @@ def generate_response(prompt, keep_memory = True, write_history = True):
         memory.append({"role":"user", "content":prompt})
         memory.append(response["message"])
 
+        # Write to gptHistory/chat_history.json the json file response
+        with open(memory_file, "w") as history_json:
+            json.dump(memory, history_json, indent=4)
+
     if write_history:
         WriteHistory(prompt, response)
 
-        # Write to gptHistory/chat_history.json the json file response
-        with open("gptHistory/chat_history.json", "w") as history_json:
-            json.dump(memory, history_json, indent=4)
 
     return response
 
