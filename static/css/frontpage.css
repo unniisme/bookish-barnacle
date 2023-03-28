@@ -1,0 +1,115 @@
+/*Courtesy gpt3*/
+
+body {
+    background-color: #1f1f1f;
+    color: #d9d9d9;
+    font-family: Arial, sans-serif;
+  }
+  
+  h {
+    align-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .note-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .note-text {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 80%;
+  }
+  
+  .save-button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  
+  .files {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    /* .file {
+      display: block;
+      color: #d9d9d9;
+      text-decoration: none;
+      margin-bottom: 10px;
+    } */
+  
+  .file {
+    display: block;
+    text-decoration: none;
+    background-color: #333;
+    color: burlywood;
+    border-radius: 5px;
+    padding: 10px;
+    width: 30%;
+    text-align: center;
+    transition: background-color 0.2s ease-in-out;
+    margin-bottom: 10px;
+  }
+  
+  .file:hover {
+    background-color: #444;
+  }
+  
+  .upload-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .upload-button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .upload-button:hover,
+  .save-button:hover {
+    background-color: #3e8e41;
+  }
+  
+  .note-text::placeholder {
+    color: #ccc;
+  }
+  
+  /* Note styling */
+  .note-text {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 80%;
+  }

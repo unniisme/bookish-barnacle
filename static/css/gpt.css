@@ -1,0 +1,64 @@
+/*Complete courtesy to gpt*/
+
+/* Set background color and font family */
+body {
+    background-color: #1d1d1d;
+    font-family: Arial, sans-serif;
+    color: #f2f2f2;
+  }
+  
+  /* Center the dialogue and prompt sections */
+  .convo {
+    text-align: left;
+    margin: 0 auto;
+    max-width: 50%;
+  }
+  
+  .dialogue-user {
+    white-space: pre-wrap;
+    font-size: 16px;
+    font-weight: bold;
+    color: #927f7f;
+  }
+  
+  .dialogue-assistant {
+    white-space: pre-wrap;
+    font-size: 16px;
+    font-weight: bold;
+    color: #f2f2f2;
+  }
+  
+  .prompt-box {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 50%;
+  }
+  
+  .prompt {
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    white-space: pre-wrap;
+    font-size: 16px;
+    color: #f2f2f2;
+    background-color: #333;
+  }
+  
+  /* Style the submit button */
+  .button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Change the color of the submit button on hover */
+  .button:hover {
+    background-color: #3e8e41;
+  }
