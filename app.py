@@ -71,10 +71,9 @@ def gpt(chat_name):
         return render_template('gpt.html', chat = history)  
     
     except Exception as e:
-        print (e)
-        return "Error. Probably OpenAI stuff. Reload or contact the admin"
+        return str(e)
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port=5500)
 
