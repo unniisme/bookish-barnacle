@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Page Title</title>
+    <script>
+        function redirectToLink() {
+          const inputBox = document.getElementById("input-box");
+          const inputValue = inputBox.value;
+          
+          window.location.href = `gpt/${inputValue}`;
+        }
+    </script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/frontpage.css') }}">
+  </head>
+  <body>
+    <button onclick="history.go(-1)">Back</button>
+    <br>
+
+    <div class="files">
+        {%for convo in convos%}
+        <a class="file" href='gpt/{{convo}}'>{{convo}}</a>
+        <br>
+        {%endfor%}
+    </div>
+    <!-- Input text box that takes me to href='gpt/{my input to the text box}' -->
+    <form action="javascript:void(0)" class="upload-form">
+        <label for="input-box">New chat:</label>
+        <input id="input-box" type="text">
+        <button class="upload-button" onclick="redirectToLink()">Go</button>
+      </form>
+  </body>
+</html>
