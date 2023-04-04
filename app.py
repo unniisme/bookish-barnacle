@@ -6,12 +6,13 @@ import json
 app = Flask(__name__)
 
 app.config['FILES_DIR'] = "files"
+app.config['GPT_DIR'] = "gptHistory"
 app.config['SECRET_KEY'] = os.urandom(12).hex()
 
 notes = ''
 
-def list_directory():
-    files = os.listdir(app.config['FILES_DIR'])
+def list_directory(directory):
+    files = os.listdir(directory)
     file_links = ""
     for file in files:
         file_links += f"<a href='files/{file}'>{file}</a><br>"
@@ -40,13 +41,16 @@ def index():
                 file.save(os.path.join(app.config['FILES_DIR'] , filename))
                 print("Downloaded to " , os.path.join(app.config['FILES_DIR'] , filename))
 
-    return render_template('index.html', notes=notes, files = list_directory())
+    return render_template('index.html', notes=notes, files = list_directory(app.config['FILES_DIR']))
 
 
 @app.route('/files/<path:path>')
 def serve_file(path):
     return send_from_directory(app.config['FILES_DIR'], path)
 
+@app.route('/gpt')
+def gpt_navigator():
+    return render_template('gpt_nav.html', convos = [s.split('.')[0] for s in list_directory(app.config['GPT_DIR'])])
 
 prompt = ''
 @app.route('/gpt/<chat_name>', methods=['GET', 'POST'])
@@ -59,11 +63,11 @@ def gpt(chat_name):
 
             generate_response(prompt, "gptHistory/" + chat_name + ".json")
 
-            with open("gptHistory/" + chat_name + ".json", "r") as history_json:
+            with open(app.config['GPT_DIR'] + "/" + chat_name + ".json", "r") as history_json:
                 history = json.load(history_json)
         else:
             try:
-                with open("gptHistory/" + chat_name + ".json", "r") as history_json:
+                with open(app.config['GPT_DIR'] + "/" + chat_name + ".json", "r") as history_json:
                     history = json.load(history_json)
             except:
                 history = []
