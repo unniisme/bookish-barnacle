@@ -47,7 +47,7 @@ body {
   }
   
   /* Style the submit button */
-  .button {
+  .submit-button {
     display: block;
     margin: 20px auto;
     padding: 10px 20px;
@@ -59,6 +59,48 @@ body {
   }
   
   /* Change the color of the submit button on hover */
+  .submit-button:hover {
+    background-color: #3e8e41;
+  }
+
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
   .button:hover {
     background-color: #3e8e41;
+  }
+
+  @media screen and (max-width: 600px) {
+    .convo {
+      max-width: 100%;
+    }
+    
+    .dialogue-user,
+    .dialogue-assistant {
+      font-size: 12px;
+    }
+    
+    .prompt-box {
+      max-width: 100%;
+    }
+    
+    .prompt {
+      font-size: 12px;
+    }
+    
+    .submit-button {
+      font-size: 14px;
+    }
+    
+    .button {
+      font-size: 14px;
+    }
   }
