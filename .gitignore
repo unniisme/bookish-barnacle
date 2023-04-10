@@ -133,3 +133,6 @@ dmypy.json
 # Don't commit history or files
 gptHistory/
 files/
+
+# Personal customization files
+*.refactory
