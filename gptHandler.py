@@ -5,7 +5,11 @@ from time import time
 import json
 
 # Open a file in append mode
-history_file = open(os.getcwd() + "/gptHistory/chat_history.log", "a")
+try:
+    history_file = open(os.getcwd() + "/gptHistory/chat_history.log", "a")
+except:
+    history_file = open(os.getcwd() + "/gptHistory/chat_history.log", "w")
+    
 # Write the current timestamp to the file
 history_file.write(f"--Timestamp:{time()}--\n")
 
