@@ -10,6 +10,7 @@ app.config['GPT_DIR'] = "gptHistory"
 app.config['SECRET_KEY'] = os.urandom(12).hex()
 
 notes = ''
+chat = []
 
 def list_directory(directory):
     files = os.listdir(directory)
@@ -24,6 +25,7 @@ def index():
     if request.method == 'POST':
         try:
             notes = request.form['notes']
+            chat.append(str(request.remote_addr) + ": " + notes)
 
         # check if the post request has the file part
         except :
@@ -41,7 +43,9 @@ def index():
                 file.save(os.path.join(app.config['FILES_DIR'] , filename))
                 print("Downloaded to " , os.path.join(app.config['FILES_DIR'] , filename))
 
-    return render_template('index.html', notes=notes, files = list_directory(app.config['FILES_DIR']))
+            
+
+    return render_template('index.html', notes=notes, chat=chat, files = list_directory(app.config['FILES_DIR']))
 
 
 @app.route('/files/<path:path>')

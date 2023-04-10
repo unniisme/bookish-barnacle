@@ -6,15 +6,25 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/frontpage.css') }}">
   </head>
   <body>
+  <div class="chatbox">
     <h>
-      Dynamic Notepad
+      Chat
     </h>
+    <div>
+      {% for dialogue in chat %}
+        <div class="convo">
+          <p >{{dialogue}}</p>
+        </div>
+      {%endfor%}
+    </div>
     <form method="POST" class="note-form">
-      <textarea name="notes" class="note-text" rows="10" cols="50">{{notes}}</textarea>
+      <textarea name="notes" class="note-text" rows="5" cols="10">{{notes}}</textarea>
       <br>
       <input class="save-button" type="submit" value="Save">
     </form>
+  </div>
 
+  <div class="not-chatbox">
     <br>
     <br>
     <br>
@@ -36,8 +46,10 @@
     </form>
 
     <br>
+  </div>
 
   <a class="button" href='gpt'>GPT</button>
+
 
   </body>
 </html>
